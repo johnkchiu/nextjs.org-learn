@@ -1,12 +1,12 @@
-const app = document.getElementById("app");
+import { useState } from "react";
 
 function Header({ title }) {
   return <h1>{title ? title : "Default title"}</h1>;
 }
 
-function HomePage() {
+export default function HomePage() {
   const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
-  const [likes, setLikes] = React.useState(0);
+  const [likes, setLikes] = useState(0);
 
   function handleClick() {
     setLikes(likes + 1);
@@ -25,5 +25,3 @@ function HomePage() {
     </div>
   );
 }
-
-ReactDOM.render(<HomePage />, app);
